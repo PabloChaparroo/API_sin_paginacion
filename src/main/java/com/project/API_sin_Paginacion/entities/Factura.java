@@ -46,9 +46,7 @@ public class Factura extends Base {
 
     //Relacion con DetallePedido
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)    //orphanRemoval sirve para que si eliminamos un pedido tambien se eliminen los pedidosProducto asociados a ese pedido
-    @JoinTable(
-            name = ("factura_detalleFactura"),
-            joinColumns = @JoinColumn(name = "fk_factura"))
+    @JoinColumn(name = "fk_factura")
 
     private List<DetalleFactura> detalleFacturas = new ArrayList<DetalleFactura>();
 

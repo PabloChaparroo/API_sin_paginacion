@@ -31,11 +31,4 @@ public class Usuario extends Base {
     private Date fechaBaja;
 
 
-    //Relacion con DetallePedido
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)    //orphanRemoval sirve para que si eliminamos un pedido tambien se eliminen los pedidosProducto asociados a ese pedido
-    @JoinTable(
-            name = "factura_detalleFactura",
-            joinColumns = @JoinColumn(name = "fk_detalleFactura"))
-
-    private List<DetalleFactura> detalleFacturas = new ArrayList<DetalleFactura>();
 }

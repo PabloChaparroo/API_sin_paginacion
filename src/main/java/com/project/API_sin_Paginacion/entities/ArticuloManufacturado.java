@@ -15,7 +15,7 @@ import java.util.Date;
 @AllArgsConstructor
 @Getter
 @Setter
-@Table(name = "artículo manufacturado")
+@Table(name = "artículo_manufacturado")
 public class ArticuloManufacturado extends Base{
     @Column(name = "denominacion")
     private String denominacion;

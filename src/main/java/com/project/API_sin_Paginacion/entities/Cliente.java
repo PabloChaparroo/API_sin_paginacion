@@ -38,18 +38,14 @@ public class Cliente extends Base {
 
     //Relacion a domicilio
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "Cliente_Domicilio",
-            joinColumns = @JoinColumn(name = "fk_cliente"))
+    @JoinColumn(name = "fk_cliente")
 
     private List<Domicilio> domicilios = new ArrayList<Domicilio>();
 
 
     //Relacion con pedido
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "cliente_pedido",
-            joinColumns = @JoinColumn(name = "fk_cliente"))
+    @JoinColumn(name = "fk_cliente")
 
     private List<Pedido> pedido = new ArrayList<Pedido>();
 

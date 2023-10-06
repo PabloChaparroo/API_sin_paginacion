@@ -16,7 +16,7 @@ import java.util.List;
 @Getter
 @Setter
 
-@Table(name = "artículo insumo")
+@Table(name = "artículo_insumo")
 public class ArticuloInsumo extends Base{
     @Column(name = "denominacion")
     private String denominacion;

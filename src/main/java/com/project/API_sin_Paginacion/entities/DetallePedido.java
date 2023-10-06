@@ -11,7 +11,7 @@ import lombok.*;
 @AllArgsConstructor
 @Getter
 @Setter
-@Table(name = "detallePedido")
+@Table(name = "detalle_Pedido")
 public class DetallePedido extends Base {
     @Column(name = "cantidad")
     private Integer cantidad;

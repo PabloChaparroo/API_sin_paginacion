@@ -15,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 @Getter
 @Setter
-@Table(name = "detalle artículo manufacturado")
+@Table(name = "detalle_artículo_manufacturado")
 public class DetalleArticuloManufacturado extends Base{
 
     @Column(name = "cantidad")
@@ -26,9 +26,7 @@ public class DetalleArticuloManufacturado extends Base{
 
     //Relacion con Articulo Insumo
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "detalleArticulo Manufacturado_articuloInsumo",
-            joinColumns = @JoinColumn(name = "fk_detalleArticuloManufacturado"))
+    @JoinColumn(name = "fk_detalleArticuloManufacturado")
 
     private List<ArticuloInsumo> articuloInsumos = new ArrayList<ArticuloInsumo>();
 

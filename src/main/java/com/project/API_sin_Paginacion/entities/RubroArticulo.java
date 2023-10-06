@@ -16,7 +16,7 @@ import java.util.Date;
 @Getter
 @Setter
 
-@Table(name = "rubro artículo")
+@Table(name = "rubro_artículo")
 public class RubroArticulo extends Base {
 
 

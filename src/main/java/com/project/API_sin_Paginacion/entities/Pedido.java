@@ -64,9 +64,7 @@ public class Pedido extends Base {
 
     //Relacion con DetallePedido
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)    //orphanRemoval sirve para que si eliminamos un pedido tambien se eliminen los pedidosProducto asociados a ese pedido
-    @JoinTable(
-            name = "pedido_detallePedido",
-            joinColumns = @JoinColumn(name = "fk_pedido"))
+    @JoinColumn(name = "fk_pedido")
 
     private List<DetallePedido> detallePedidos = new ArrayList<DetallePedido>();
 
